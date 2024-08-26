@@ -1,13 +1,18 @@
 import {useState}from 'react'
-import AboutPage from '../pages/AboutPage';
+// import AboutPage from '../pages/AboutPage';
+import axios from 'axios'
+// import Nav from './Nav';
  
 
  
-function RecipesForm() {
+function RecipesForm({updateMade, setUpdateMade}) {
 const [formData, setFormData] = useState({
     text:'',
     completed: false,
+    ingredients: ''
 })
+
+const LOCAL_URL = 'http://localhost:5051';
 
 //I can type things, and I can add a new recipes. 
 const handleChange = (evt) => {
@@ -31,6 +36,13 @@ const handleToggle = (evt) => {
 const addRecipe = async (formData) =>{
     console.log(`in addRecipe and this is my form : ${formData}`)
     console.log('eventully this will send a post request to my backend')
+    try {
+const response = await axios.post(`${LOCAL_URL}/api/recipes`,formData)
+console.log(response.data);
+setUpdateMade(!updateMade);
+    } catch (err){
+console.error(err);
+    }
 }
 // before we can fully implement
 //we need to import axios. Implement this on my serverback end and no out to a candle the response

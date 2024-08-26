@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-
+// import RecipesForm from "../components/RecipesForm";
 function RecipesPage() {
   
   const [query, setQuery] = useState('');
@@ -28,6 +28,7 @@ function RecipesPage() {
     };
   
     // Fetch recipes when the query changes
+    
     useEffect(() => {
       if (query.trim() !== '') {
         fetchRecipes();
