@@ -2,7 +2,7 @@ import React from 'react'
 
 function AboutPage() {
   return (
-    <div>AboutPage</div>
+    <div>About Page 2024-08-30</div>
   )
 }
 

@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react"
+import { Route, Routes} from "react-router-dom";
+import recipeImage from '../assets/images/meal2.jpg'
+
 // import RecipesForm from "../components/RecipesForm";
 function RecipesPage() {
   
@@ -39,17 +42,27 @@ function RecipesPage() {
   
     return (
       <>
-      <div style={{ backgroundColor: 'rgba(198, 4, 162, 0.627)', padding: '20px', borderRadius: '10px' }}>
-        <h1>Search for Recipes</h1>
+      <div style={{ fontSize: '48px', marginBottom: '20px', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',  }}>
+        <h1 style={{backgroundImage: `url(${recipeImage})`,  backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          color: 'white',
+          padding: '100px',
+          textAlign: 'center',
+          width: '100%', 
+          marginBottom: '50px'}}>Search for Recipes</h1>
         <p>Type in the search bar below to find your favorite recipes!</p>
         
-        <div className="search-bar" style={{ margin: '20px 0' }}>
+        <div className="search-bar" style={{ position: 'relative', width: '50%', maxWidth: '600px' }}>
           <input
             type="text"
             value={query}
             onChange={handleChange}
             placeholder="Search by name"
-            style={{ padding: '10px', width: '50%' }}
+            style={{
+              padding: '10px 40px 10px 20px', 
+              width: '100%',
+              borderRadius: '20px',
+            }}
           />
         </div>
         </div>
@@ -71,7 +84,7 @@ function RecipesPage() {
               </div>
             ))
           ) : (
-            <p>No recipes found</p>
+            <p style={{ fontSize: '20px', marginBottom: '20px', }}>No recipes found</p>
           )}
         </div>
     

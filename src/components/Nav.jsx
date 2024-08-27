@@ -1,17 +1,25 @@
-import {link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 function Nav() {
   return (
     <div className='nav'>
         <Link to='/'>
-        <div>WElcome</div>
-        </Link>
-        <Link to='/recipes'>
+        <div>Home</div>
+         </Link>
+        <Link to='/RecipesPage'>
         <div>Recipes</div>
         </Link>
-        <Link to='/about'>
+        <Link to='/AboutPage'> 
         <div>About</div>
         </Link>
+        <Link to='/LoginPage'> 
+        <div>Login</div>
+        </Link>
+        <Link to='/SignUpPage'> 
+        <div>SignUp</div>
+        </Link>
+
+
     </div>
   )
 }
