@@ -41,10 +41,9 @@ setUpdateMade(!updateMade);
 console.error(err);
     }
 }
-// before we can fully implement
-//we need to import axios. Implement this on my serverback end and no out to a candle the response
-//It's going to be 
-//this is my endpoit: post route to 'api/recipe' with the new to do in the req.body.
+
+
+//this is my endpoit: post route to 'api/recipe' with the new recipe in the req.body.
 // Handle form submission
 const handleSubmit = (evt) => {
     evt.preventDefault();
