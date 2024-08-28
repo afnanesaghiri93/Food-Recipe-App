@@ -43,16 +43,17 @@ function RecipesPage() {
     return (
       <>
       <div style={{ fontSize: '48px', marginBottom: '20px', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',  }}>
-        <h1 style={{backgroundImage: `url(${recipeImage})`,  backgroundSize: 'cover',
+        <h1 style={{backgroundImage: `url(${recipeImage})`,  backgroundSize: 'cover' ,
+              border: 'none',
           backgroundPosition: 'center',
           color: 'white',
           padding: '100px',
           textAlign: 'center',
           width: '100%', 
-          marginBottom: '50px'}}>Search for Recipes</h1>
+         }}>Search for Recipes</h1>
         <p>Type in the search bar below to find your favorite recipes!</p>
         
-        <div className="search-bar" style={{ position: 'relative', width: '50%', maxWidth: '600px' }}>
+        <div className="search-bar" style={{ position: 'relative', width: '50%', maxWidth: '600px'}}>
           <input
             type="text"
             value={query}
@@ -62,6 +63,7 @@ function RecipesPage() {
               padding: '10px 40px 10px 20px', 
               width: '100%',
               borderRadius: '20px',
+              
             }}
           />
         </div>
